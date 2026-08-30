@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Clínica Veterinária Mundo Pet</title>
+    <meta name="description" content="Solicite um orçamento para consultas, exames, cirurgias e outros serviços da Clínica Veterinária Mundo Pet.">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo-mundopet.svg" alt="Logotipo da Clínica Veterinária Mundo Pet" width="80" height="80">
+        <p>Clínica Veterinária Mundo Pet</p>
+        <p>Rua Rego Barros, 1491 - Vila Antonieta | Telefone: (11) 2305-5800 | WhatsApp: (11) 99925-9171</p>
+        <nav aria-label="Menu Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="cirurgias.html">Cirurgias &amp; Internações</a></li>
+                <li><a href="exames.html">Exames</a></li>
+                <li><a href="emergencia.html">Emergência</a></li>
+                <li><a href="orcamento.html" aria-current="page">Orçamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="voluntario.html">Seja Voluntário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h1>Solicitar Orçamento</h1>
+                <p>Preencha o formulário abaixo para receber um orçamento sem compromisso para o serviço que seu pet precisa.</p>
+            </header>
+
+            <section aria-labelledby="como-funciona">
+                <h2 id="como-funciona">Como Funciona</h2>
+                <p>Depois de enviar o formulário, nossa equipe avalia as informações e entra em contato com o valor estimado do serviço, prazo e disponibilidade de horários. Os valores podem variar após uma avaliação presencial do animal.</p>
+            </section>
+
+            <section aria-labelledby="form-orcamento-titulo">
+                <h2 id="form-orcamento-titulo">Formulário de Solicitação de Orçamento</h2>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Dados do Tutor</legend>
+
+                        <p>
+                            <label for="nome-tutor">Nome completo:</label><br>
+                            <input type="text" id="nome-tutor" name="nome_tutor" required minlength="3" placeholder="Digite seu nome completo">
+                        </p>
+
+                        <p>
+                            <label for="email-tutor">E-mail:</label><br>
+                            <input type="email" id="email-tutor" name="email_tutor" required placeholder="seuemail@exemplo.com">
+                        </p>
+
+                        <p>
+                            <label for="telefone-tutor">Telefone / WhatsApp:</label><br>
+                            <input type="tel" id="telefone-tutor" name="telefone_tutor" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(11) 99925-9171">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados do Pet</legend>
+
+                        <p>
+                            <label for="nome-pet">Nome do pet:</label><br>
+                            <input type="text" id="nome-pet" name="nome_pet" required placeholder="Nome do animal">
+                        </p>
+
+                        <p>
+                            <label for="especie-pet">Espécie:</label><br>
+                            <select id="especie-pet" name="especie_pet" required>
+                                <option value="">Selecione</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="ave">Ave</option>
+                                <option value="roedor">Roedor</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="porte-pet">Porte do pet:</label><br>
+                            <select id="porte-pet" name="porte_pet">
+                                <option value="pequeno">Pequeno</option>
+                                <option value="medio">Médio</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="idade-pet">Idade do pet (em anos):</label><br>
+                            <input type="number" id="idade-pet" name="idade_pet" min="0" max="40" step="1" placeholder="Ex: 3">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Serviço Desejado</legend>
+
+                        <p>
+                            <label for="servico-orcamento">Selecione o serviço:</label><br>
+                            <select id="servico-orcamento" name="servico_orcamento" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="consulta">Consulta Veterinária</option>
+                                <option value="nutricao">Consulta de Nutrição</option>
+                                <option value="dermatologia">Consulta de Dermatologia</option>
+                                <option value="odontologia">Consulta de Odontologia</option>
+                                <option value="cirurgia">Cirurgia</option>
+                                <option value="castracao">Castração</option>
+                                <option value="internacao">Internação</option>
+                                <option value="exame-lab">Exame Laboratorial</option>
+                                <option value="exame-imagem">Exame de Imagem (Raio-X/Ultrassom)</option>
+                                <option value="banho-tosa">Banho &amp; Tosa</option>
+                                <option value="domiciliar">Atendimento Domiciliar</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="urgencia-orcamento">Urgência do atendimento:</label><br>
+                            <select id="urgencia-orcamento" name="urgencia_orcamento">
+                                <option value="sem-urgencia">Sem urgência</option>
+                                <option value="proximos-dias">Nos próximos dias</option>
+                                <option value="urgente">Urgente</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="detalhes-orcamento">Detalhes do que o pet precisa:</label><br>
+                            <textarea id="detalhes-orcamento" name="detalhes_orcamento" rows="5" cols="40" placeholder="Descreva sintomas, exames anteriores ou outras informações relevantes"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Confirmação</legend>
+                        <p>
+                            <input type="checkbox" id="termos-orcamento" name="termos_orcamento" required>
+                            <label for="termos-orcamento">Declaro que as informações fornecidas são verdadeiras e concordo com o contato da clínica para envio do orçamento.</label>
+                        </p>
+                    </fieldset>
+
+                    <p>
+                        <button type="submit">Solicitar Orçamento</button>
+                        <button type="reset">Limpar Formulário</button>
+                    </p>
+                </form>
+            </section>
+
+            <aside aria-labelledby="alternativa-orcamento">
+                <h2 id="alternativa-orcamento">Prefere Falar Diretamente?</h2>
+                <p>Você também pode solicitar seu orçamento pelo telefone (11) 2305-5800 ou WhatsApp (11) 99925-9171.</p>
+            </aside>
+        </article>
+    </main>
+
+    <footer>
+        <section aria-labelledby="rodape-contato">
+            <h2 id="rodape-contato">Contato</h2>
+            <address>
+                Clínica Veterinária Mundo Pet<br>
+                Rua Rego Barros, 1491 - Vila Antonieta<br>
+                Telefone: <a href="tel:+551123055800">(11) 2305-5800</a><br>
+                WhatsApp: <a href="tel:+5511999259171">(11) 99925-9171</a>
+            </address>
+        </section>
+        <nav aria-label="Menu do Rodapé">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="voluntario.html">Voluntariado</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 Clínica Veterinária Mundo Pet. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Clínica Veterinária Mundo Pet</title>
+    <meta name="description" content="Fale com a Clínica Veterinária Mundo Pet: endereço, telefone, horário de funcionamento e formulário de contato.">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo-mundopet.svg" alt="Logotipo da Clínica Veterinária Mundo Pet" width="80" height="80">
+        <p>Clínica Veterinária Mundo Pet</p>
+        <p>Rua Rego Barros, 1491 - Vila Antonieta | Telefone: (11) 2305-5800 | WhatsApp: (11) 99925-9171</p>
+        <nav aria-label="Menu Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="cirurgias.html">Cirurgias &amp; Internações</a></li>
+                <li><a href="exames.html">Exames</a></li>
+                <li><a href="emergencia.html">Emergência</a></li>
+                <li><a href="orcamento.html">Orçamento</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="voluntario.html">Seja Voluntário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h1>Contato</h1>
+                <p>Estamos à disposição para atender você e o seu pet</p>
+            </header>
+
+            <section aria-labelledby="dados-contato">
+                <h2 id="dados-contato">Nossos Canais de Atendimento</h2>
+                <address>
+                    <p><strong>Clínica Veterinária Mundo Pet</strong></p>
+                    <p>Endereço: Rua Rego Barros, 1491 - Vila Antonieta</p>
+                    <p>Telefone: <a href="tel:+551123055800">(11) 2305-5800</a></p>
+                    <p>WhatsApp/Celular: <a href="tel:+5511999259171">(11) 99925-9171</a></p>
+                    <p>Facebook: veterinariamundopet</p>
+                    <p>Instagram: @clinicamundopetoficial</p>
+                </address>
+            </section>
+
+            <section aria-labelledby="horario-funcionamento">
+                <h2 id="horario-funcionamento">Horário de Funcionamento</h2>
+                <table>
+                    <caption>Horários de atendimento da clínica</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Dia da Semana</th>
+                            <th scope="col">Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Segunda a Sexta-feira</th>
+                            <td>08h00 às 19h00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sábado</th>
+                            <td>08h00 às 13h00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Domingo e Feriados</th>
+                            <td>Somente emergências (sob consulta prévia)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section aria-labelledby="form-contato-titulo">
+                <h2 id="form-contato-titulo">Envie uma Mensagem</h2>
+                <p>Preencha o formulário abaixo com sua dúvida, sugestão ou pedido de informação. Retornaremos o contato o mais breve possível.</p>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Seus Dados</legend>
+
+                        <p>
+                            <label for="nome-contato">Nome completo:</label><br>
+                            <input type="text" id="nome-contato" name="nome_contato" required minlength="3" placeholder="Digite seu nome completo">
+                        </p>
+
+                        <p>
+                            <label for="email-contato">E-mail:</label><br>
+                            <input type="email" id="email-contato" name="email_contato" required placeholder="seuemail@exemplo.com">
+                        </p>
+
+                        <p>
+                            <label for="telefone-contato">Telefone / WhatsApp:</label><br>
+                            <input type="tel" id="telefone-contato" name="telefone_contato" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(11) 99925-9171">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Mensagem</legend>
+
+                        <p>
+                            <label for="assunto-contato">Assunto:</label><br>
+                            <select id="assunto-contato" name="assunto_contato" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="duvida">Dúvida geral</option>
+                                <option value="agendamento">Agendamento de consulta</option>
+                                <option value="orcamento">Solicitação de orçamento</option>
+                                <option value="emergencia">Emergência</option>
+                                <option value="elogio-sugestao">Elogio ou sugestão</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="mensagem-contato">Sua mensagem:</label><br>
+                            <textarea id="mensagem-contato" name="mensagem_contato" rows="6" cols="40" required minlength="10" placeholder="Escreva sua mensagem aqui"></textarea>
+                        </p>
+
+                        <p>
+                            <label for="melhor-horario">Melhor horário para retorno:</label><br>
+                            <input type="time" id="melhor-horario" name="melhor_horario">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Confirmação</legend>
+                        <p>
+                            <input type="checkbox" id="termos-contato" name="termos_contato" required>
+                            <label for="termos-contato">Declaro que as informações fornecidas são verdadeiras e concordo com o contato da clínica.</label>
+                        </p>
+                    </fieldset>
+
+                    <p>
+                        <button type="submit">Enviar Mensagem</button>
+                        <button type="reset">Limpar Formulário</button>
+                    </p>
+                </form>
+            </section>
+
+            <section aria-labelledby="mapa">
+                <h2 id="mapa">Como Chegar</h2>
+                <p>Confira abaixo a localização da Clínica Veterinária Mundo Pet, na Rua Rego Barros, 1491, Vila Antonieta.</p>
+                <iframe
+                    title="Mapa de localização da Clínica Veterinária Mundo Pet"
+                    src="https://www.google.com/maps?q=Rua+Rego+Barros,+1491,+Vila+Antonieta,+S%C3%A3o+Paulo&output=embed"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <section aria-labelledby="rodape-contato">
+            <h2 id="rodape-contato">Contato</h2>
+            <address>
+                Clínica Veterinária Mundo Pet<br>
+                Rua Rego Barros, 1491 - Vila Antonieta<br>
+                Telefone: <a href="tel:+551123055800">(11) 2305-5800</a><br>
+                WhatsApp: <a href="tel:+5511999259171">(11) 99925-9171</a>
+            </address>
+        </section>
+        <nav aria-label="Menu do Rodapé">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="voluntario.html">Voluntariado</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 Clínica Veterinária Mundo Pet. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
