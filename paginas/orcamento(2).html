@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Clínica Veterinária Mundo Pet</title>
+    <meta name="description" content="Solicite um orçamento pelo WhatsApp para consultas, exames, cirurgias e outros serviços da Clínica Veterinária Mundo Pet.">
+</head>
+
+<body>
+    <header>
+        <img src="../assets/img/logo_pet.jpg" alt="Logotipo da Clínica Veterinária Mundo Pet: cruz verde com pegada de cachorro e gato dourados" width="120" height="138">
+        <p>Clínica Veterinária Mundo Pet</p>
+        <p>Praça Vieira do Couto, 42 - Jardim Vila Formosa | Telefone: (11) 999259171</p>
+        <nav aria-label="Menu Principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="cirurgias.html">Cirurgias &amp; Internações</a></li>
+                <li><a href="exames.html">Exames</a></li>
+                <li><a href="banho_e_tosa.html">Banho &amp; Tosa</a></li>
+                <li><a href="vacinacao.html">Vacinação</a></li>
+                <li><a href="orcamento.html" aria-current="page">Orçamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h1>Solicitar Orçamento</h1>
+                <p>A forma mais rápida de receber seu orçamento é falando diretamente com a gente pelo WhatsApp.</p>
+            </header>
+
+            <section aria-labelledby="whatsapp-orcamento">
+                <h2 id="whatsapp-orcamento">Fale pelo WhatsApp</h2>
+                <p>Envie o nome do seu pet, a espécie e o serviço que ele precisa, e nossa equipe retorna com o valor
+                    estimado.</p>
+                <p><a href="https://wa.me/5511999259171?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Solicitar orçamento pelo WhatsApp</a></p>
+            </section>
+
+            <section aria-labelledby="form-orcamento-titulo">
+                <h2 id="form-orcamento-titulo">Ou Preencha o Formulário Abaixo</h2>
+                <p>Se preferir, deixe seus dados aqui e retornaremos o contato pelo WhatsApp informado.</p>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Dados do Tutor</legend>
+
+                        <p>
+                            <label for="nome-tutor">Nome completo:</label><br>
+                            <input type="text" id="nome-tutor" name="nome_tutor" required minlength="3"
+                                placeholder="Digite seu nome completo">
+                        </p>
+
+                        <p>
+                            <label for="telefone-tutor">WhatsApp para retorno:</label><br>
+                            <input type="tel" id="telefone-tutor" name="telefone_tutor" required
+                                pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(11) 99925-9171">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados do Pet</legend>
+
+                        <p>
+                            <label for="nome-pet">Nome do pet:</label><br>
+                            <input type="text" id="nome-pet" name="nome_pet" required placeholder="Nome do animal">
+                        </p>
+
+                        <p>
+                            <label for="especie-pet">Espécie:</label><br>
+                            <select id="especie-pet" name="especie_pet" required>
+                                <option value="">Selecione</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Serviço Desejado</legend>
+
+                        <p>
+                            <label for="servico-orcamento">Selecione o serviço:</label><br>
+                            <select id="servico-orcamento" name="servico_orcamento" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="consulta">Consulta Veterinária</option>
+                                <option value="domiciliar">Consulta Domiciliar</option>
+                                <option value="vacinacao">Vacinação</option>
+                                <option value="cirurgia">Cirurgia</option>
+                                <option value="internacao">Internação</option>
+                                <option value="exame-lab">Exame Laboratorial</option>
+                                <option value="exame-imagem">Exame de Imagem (Raio-X/Ultrassom)</option>
+                                <option value="banho-tosa">Banho &amp; Tosa</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="detalhes-orcamento">Detalhes do que o pet precisa:</label><br>
+                            <textarea id="detalhes-orcamento" name="detalhes_orcamento" rows="5" cols="40"
+                                placeholder="Descreva sintomas ou outras informações relevantes"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Confirmação</legend>
+                        <p>
+                            <input type="checkbox" id="termos-orcamento" name="termos_orcamento" required>
+                            <label for="termos-orcamento">Declaro que as informações fornecidas são verdadeiras e
+                                concordo com o contato da clínica pelo WhatsApp para envio do orçamento.</label>
+                        </p>
+                    </fieldset>
+
+                    <p>
+                        <button type="submit">Enviar Solicitação</button>
+                        <button type="reset">Limpar Formulário</button>
+                    </p>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <section aria-labelledby="rodape-contato">
+            <h2 id="rodape-contato">Contato</h2>
+            <address>
+                Praça Vieira do Couto, 42 - Jardim Vila Formosa <br>
+                Telefone: <a href="tel:+5511999259171">(11) 999259171</a>
+                <br>
+                <a href="https://wa.me/5511999259171?text=Ol%C3%A1%2C%20vim%20pelo%20site" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <br>
+                <a href="https://www.facebook.com/veterinariaamundopet/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <br>
+                <a href="https://www.instagram.com/veterinariamundopetoficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </address>
+        </section>
+        <nav aria-label="Menu do Rodapé">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="vacinacao.html">Vacinação</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 Clínica Veterinária Mundo Pet. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
