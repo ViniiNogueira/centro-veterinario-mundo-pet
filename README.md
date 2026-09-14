@@ -46,3 +46,5 @@ Projeto desenvolvido por:
 - Eduardo RGM: 47478497
 - Nicole RGM: 47259701
 - Vinicius RGM: 47697318
+
+![alt text](<WhatsApp Image 2026-09-14 at 01.23.10-1.jpeg>)
