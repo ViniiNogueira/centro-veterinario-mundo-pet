@@ -40,6 +40,15 @@ para a validaação usamos o site: [W3C Validator](https://validator.w3.org/)
 
 <img width="946" height="487" alt="image" src="https://github.com/user-attachments/assets/3aa6275c-4063-4281-b163-64e4e476209b" />
 
+## Deploy
+
+Após a finalização da estrutura HTML das páginas, o projeto foi publicado utilizando o **GitHub Pages**, ferramenta gratuita de hospedagem estática integrada ao GitHub. Essa etapa permitiu que o site ficasse disponível on-line, possibilitando que o professor e demais avaliadores acessassem o resultado do trabalho diretamente pelo navegador, sem necessidade de baixar ou configurar o projeto localmente.
+
+O site pode ser acessado através do link: [Centro Veterinário Mundo Pet](https://viniinogueira.github.io/centro-veterinario-mundo-pet/)
+
+Ou pelo endereço completo:
+https://viniinogueira.github.io/centro-veterinario-mundo-pet/
+
 
 ### Uso de inteligência artificial
 
