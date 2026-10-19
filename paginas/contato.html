@@ -77,13 +77,13 @@
                 <p>Preencha o formulário abaixo com sua dúvida, sugestão ou pedido de informação. Retornaremos o
                     contato o mais breve possível.</p>
 
-                <form action="#" method="post">
+                <form id="form-contato" action="#" method="post">
                     <fieldset>
                         <legend>Seus Dados</legend>
 
                         <p>
                             <label for="nome-contato">Nome completo:</label><br>
-                            <input type="text" id="nome-contato" name="nome_contato" required minlength="3"
+                            <input type="text" id="nome-contato" name="no me_contato" required minlength="3"
                                 placeholder="Digite seu nome completo">
                         </p>
 
@@ -137,6 +137,9 @@
                         <button type="submit">Enviar Mensagem</button>
                         <button type="reset">Limpar Formulário</button>
                     </p>
+
+                    <!-- criado para quando o usuario apertar em enviar, ele sinalizar q algo aconteceu -->
+                    <p id="status-form" role="status" aria-live="polite"></p>
                 </form>
             </section>
 
@@ -175,6 +178,8 @@
         </nav>
         <p>&copy; 2026 Clínica Veterinária Mundo Pet. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="../js/contato.js" defer></script>
 </body>
 
 </html>
