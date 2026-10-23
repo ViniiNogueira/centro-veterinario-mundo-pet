@@ -76,7 +76,7 @@
                 <h2 id="form-orcamento-titulo">Ou Preencha o Formulário Abaixo</h2>
                 <p>Se preferir, deixe seus dados aqui e retornaremos o contato pelo WhatsApp informado.</p>
 
-                <form action="#" method="post">
+                <form id="form-orcamento" action="#" method="post">
                     <fieldset>
                         <legend>Dados do Tutor</legend>
 
@@ -146,6 +146,8 @@
                         </p>
                     </fieldset>
 
+                    <p id="status-form" role="status" aria-live="polite"></p>
+                    
                     <p class="acoes">
                         <button type="submit"><svg class="icone-btn" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Enviar Solicitação</button>
                         <button type="reset">Limpar Formulário</button>
@@ -183,6 +185,7 @@
         <p class="rodape-copy">&copy; 2026 Clínica Veterinária Mundo Pet. Todos os direitos reservados.</p>
     </footer>
     <script src="../js/site.js" defer></script>
+    <script src="../js/orcamento.js" defer></script>
 </body>
 
 </html>
