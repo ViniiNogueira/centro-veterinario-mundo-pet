@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">Cruz veterinária nas cores da Mundo Pet com uma pata no centro</title>
+  <rect x="35" y="3" width="30" height="32" rx="7" fill="#436883"/>
+  <rect x="3" y="35" width="32" height="30" rx="7" fill="#0c5063"/>
+  <rect x="65" y="35" width="32" height="30" rx="7" fill="#c7b180"/>
+  <rect x="35" y="65" width="30" height="32" rx="7" fill="#2c9a8f"/>
+  <rect x="35" y="35" width="30" height="30" fill="#0e3f60"/>
+  <g transform="translate(35 35) scale(1.25)" fill="#ffffff">
+    <path d="M8.5 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm7 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM4.5 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm15 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 12c-3 0-6 3.2-6 5.5 0 1.7 1.4 2.5 3 2.5 1 0 2-.5 3-.5s2 .5 3 .5c1.6 0 3-.8 3-2.5 0-2.3-3-5.5-6-5.5z"/>
+  </g>
+</svg>
