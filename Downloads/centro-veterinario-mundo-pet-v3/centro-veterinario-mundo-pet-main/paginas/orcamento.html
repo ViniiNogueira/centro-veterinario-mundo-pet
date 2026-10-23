@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento - Clínica Veterinária Mundo Pet</title>
+    <meta name="description" content="Solicite um orçamento pelo WhatsApp para consultas, exames, cirurgias e outros serviços da Clínica Veterinária Mundo Pet.">
+    <meta name="theme-color" content="#0e3f60">
+    <link rel="icon" type="image/png" href="../assets/img/logo-cruz.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <svg aria-hidden="true" style="display: none;">
+        <defs>
+            <symbol id="icon-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></symbol>
+            <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></symbol>
+            <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+            <symbol id="icon-clock" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></symbol>
+            <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></symbol>
+            <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol>
+            <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14 8V6a1 1 0 0 1 1-1h2V2h-3a4 4 0 0 0-4 4v2H7v3h3v11h4V11h3l1-3h-4z"/></symbol>
+            <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
+            <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 15-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"/></symbol>
+            <symbol id="icon-medical" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm6 11h-3v3h-2v-3H8v-2h3v-3h2v3h3v2z"/></symbol>
+            <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M9.37 5.51A7.35 7.35 0 0 0 9.1 7.5c0 4.08 3.32 7.4 7.4 7.4.68 0 1.35-.09 1.99-.27A7.014 7.014 0 0 1 12 19c-3.86 0-7-3.14-7-7 0-2.93 1.81-5.45 4.37-6.49zM12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+            <symbol id="icon-scissors" viewBox="0 0 24 24"><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3h-3z"/></symbol>
+            <symbol id="icon-flask" viewBox="0 0 24 24"><path d="M19.8 18.4 14 10.67V6.5l1.35-1.69c.26-.33.03-.81-.39-.81H9.04c-.42 0-.65.48-.39.81L10 6.5v4.17L4.2 18.4c-.49.66-.02 1.6.8 1.6h14c.82 0 1.29-.94.8-1.6z"/></symbol>
+            <symbol id="icon-home" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></symbol>
+            <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></symbol>
+            <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></symbol>
+        </defs>
+    </svg>
+    <header>
+        <a class="marca" href="../index.html">
+            <img src="../assets/img/logo-cruz.png" alt="Logotipo da Clínica Veterinária Mundo Pet: cruz com silhuetas de um cachorro e um gato" width="60" height="60">
+            <span class="marca-texto"><small>Clínica Veterinária</small><strong>Mundo Pet</strong></span>
+        </a>
+        <address class="topo-contato">
+            <span><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg> Praça Vieira do Couto, 38 - Jardim Vila Formosa</span>
+            <a href="tel:+5511999259171"><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg> (11) 999259171</a>
+        </address>
+        <a class="botao botao-header" href="https://wa.me/5511999259171?text=Ol%C3%A1%2C%20vim%20pelo%20site" target="_blank" rel="noopener noreferrer"><svg class="icone-btn" aria-hidden="true" focusable="false"><use href="#icon-chat"/></svg> <span class="texto-wa">WhatsApp</span></a>
+        <nav aria-label="Menu Principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Quem Somos</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="cirurgias.html">Cirurgias &amp; Internações</a></li>
+                <li><a href="exames.html">Exames</a></li>
+                <li><a href="banho_e_tosa.html">Banho &amp; Tosa</a></li>
+                <li><a href="vacinacao.html">Vacinação</a></li>
+                <li><a href="orcamento.html" aria-current="page">Orçamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+    </header><main id="conteudo">
+        <article>
+            <header class="hero">
+                <img class="hero-deco" src="../assets/img/cruz-mundo-pet.svg" alt="" width="256" height="256">
+                <h1>Solicitar Orçamento</h1>
+                <p>A forma mais rápida de receber seu orçamento é falando diretamente com a gente pelo WhatsApp.</p>
+            </header>
+
+            <section aria-labelledby="whatsapp-orcamento">
+                <h2 id="whatsapp-orcamento">Fale pelo WhatsApp</h2>
+                <p>Envie o nome do seu pet, a espécie e o serviço que ele precisa, e nossa equipe retorna com o valor
+                    estimado.</p>
+                <p><a class="botao" href="https://wa.me/5511999259171?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Solicitar orçamento pelo WhatsApp</a></p>
+            </section>
+
+            <section aria-labelledby="form-orcamento-titulo">
+                <h2 id="form-orcamento-titulo">Ou Preencha o Formulário Abaixo</h2>
+                <p>Se preferir, deixe seus dados aqui e retornaremos o contato pelo WhatsApp informado.</p>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Dados do Tutor</legend>
+
+                        <p>
+                            <label for="nome-tutor">Nome completo:</label><br>
+                            <input type="text" id="nome-tutor" name="nome_tutor" required minlength="3"
+                                placeholder="Digite seu nome completo">
+                        </p>
+
+                        <p>
+                            <label for="telefone-tutor">WhatsApp para retorno:</label><br>
+                            <input type="tel" id="telefone-tutor" name="telefone_tutor" required
+                                pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" title="Use o formato (11) 99999-9999" inputmode="tel" autocomplete="tel" placeholder="(11) 99925-9171">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados do Pet</legend>
+
+                        <p>
+                            <label for="nome-pet">Nome do pet:</label><br>
+                            <input type="text" id="nome-pet" name="nome_pet" required placeholder="Nome do animal">
+                        </p>
+
+                        <p>
+                            <label for="especie-pet">Espécie:</label><br>
+                            <select id="especie-pet" name="especie_pet" required>
+                                <option value="">Selecione</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Serviço Desejado</legend>
+
+                        <p>
+                            <label for="servico-orcamento">Selecione o serviço:</label><br>
+                            <select id="servico-orcamento" name="servico_orcamento" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="consulta">Consulta Veterinária</option>
+                                <option value="domiciliar">Consulta Domiciliar</option>
+                                <option value="vacinacao">Vacinação</option>
+                                <option value="cirurgia">Cirurgia</option>
+                                <option value="internacao">Internação</option>
+                                <option value="exame-lab">Exame Laboratorial</option>
+                                <option value="exame-imagem">Exame de Imagem (Raio-X/Ultrassom)</option>
+                                <option value="banho-tosa">Banho &amp; Tosa</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="detalhes-orcamento">Detalhes do que o pet precisa:</label><br>
+                            <textarea id="detalhes-orcamento" name="detalhes_orcamento" rows="5" cols="40"
+                                placeholder="Descreva sintomas ou outras informações relevantes"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Confirmação</legend>
+                        <p>
+                            <input type="checkbox" id="termos-orcamento" name="termos_orcamento" required>
+                            <label for="termos-orcamento">Declaro que as informações fornecidas são verdadeiras e
+                                concordo com o contato da clínica pelo WhatsApp para envio do orçamento.</label>
+                        </p>
+                    </fieldset>
+
+                    <p class="acoes">
+                        <button type="submit"><svg class="icone-btn" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg> Enviar Solicitação</button>
+                        <button type="reset">Limpar Formulário</button>
+                    </p>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <section class="rodape-marca" aria-labelledby="rodape-marca-titulo">
+            <img src="../assets/img/logo-cruz.png" alt="" width="76" height="76">
+            <h2 id="rodape-marca-titulo" class="nome">Clínica Veterinária Mundo Pet</h2>
+            <p>Cuidado veterinário próximo e humano no Jardim Vila Formosa.</p>
+        </section>
+        <section aria-labelledby="rodape-contato">
+            <h2 id="rodape-contato">Contato</h2>
+            <address>
+                <span><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-pin"/></svg> Praça Vieira do Couto, 38 - Jardim Vila Formosa</span>
+                <a href="tel:+5511999259171"><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg> (11) 999259171</a>
+                <a href="https://wa.me/5511999259171?text=Ol%C3%A1%2C%20vim%20pelo%20site" target="_blank" rel="noopener noreferrer"><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-chat"/></svg> WhatsApp</a>
+                <a href="https://www.facebook.com/veterinariaamundopet/" target="_blank" rel="noopener noreferrer"><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-facebook"/></svg> Facebook</a>
+                <a href="https://www.instagram.com/veterinariamundopetoficial/" target="_blank" rel="noopener noreferrer"><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-instagram"/></svg> Instagram</a>
+            </address>
+        </section>
+        <section aria-labelledby="rodape-horario">
+            <h2 id="rodape-horario">Horário</h2>
+            <p><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-clock"/></svg> Segunda a Sábado, das 09h às 18h</p>
+            <p><svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-home"/></svg> Atendimento domiciliar por agendamento</p>
+        </section>
+        <nav aria-labelledby="rodape-menu">
+            <h2 id="rodape-menu">Navegação</h2>
+            <ul><li><a href="../index.html">Início</a></li><li><a href="sobre.html">Quem Somos</a></li><li><a href="especialidades.html">Especialidades</a></li><li><a href="cirurgias.html">Cirurgias &amp; Internações</a></li><li><a href="exames.html">Exames</a></li><li><a href="banho_e_tosa.html">Banho &amp; Tosa</a></li><li><a href="vacinacao.html">Vacinação</a></li><li><a href="orcamento.html">Orçamento</a></li><li><a href="contato.html">Contato</a></li><li><a href="galeria.html">Galeria</a></li></ul>
+        </nav>
+        <p class="rodape-copy">&copy; 2026 Clínica Veterinária Mundo Pet. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../js/site.js" defer></script>
+</body>
+
+</html>
