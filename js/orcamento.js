@@ -28,6 +28,7 @@ function mensagemErro(campo) {
     if (v.valueMissing) return 'Preencha este campo.';
     if (v.tooShort) return `Digite pelo menos ${campo.minLength} caracteres.`;
     if (v.patternMismatch && campo.type === 'tel') return 'Use o formato (11) 99999-9999.';
+    if (v.typeMismatch && campo.type === 'email') return 'Digite um e-mail válido.';
 
     return '';
 }
@@ -71,11 +72,13 @@ form.addEventListener('submit', (evento) => {
 
     if (!tudoValidado) {
         statusForm.textContent = 'Corrija os campos destacados e tente novamente.';
+        statusForm.className = 'form-status--erro';
         return;
     }
 
     if (!termos.checked) {
         statusForm.textContent = 'Você precisa concordar com o contato da clínica.';
+        statusForm.className = 'form-status--erro';
         return;
     }
 
@@ -107,11 +110,13 @@ form.addEventListener('submit', (evento) => {
     window.open(url, '_blank', 'noopener');
 
     statusForm.textContent = 'Abrindo o WhatsApp para você enviar a mensagem...';
+    statusForm.className = '';
     form.reset();
 });
 
 form.addEventListener('reset', () => {
     statusForm.textContent = '';
+    statusForm.className = '';
     form.querySelectorAll('.erro-campo').forEach((e) => (e.textContent = ''));
     campos.forEach((campo) => campo.setAttribute('aria-invalid', 'false'));
 });
