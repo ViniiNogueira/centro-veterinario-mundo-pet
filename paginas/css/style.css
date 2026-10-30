@@ -7,7 +7,7 @@
   --turquesa-profundo: #0E4B65;
   --turquesa-claro: #E1EDEC;
   --turquesa-nevoa: #F7F9FA;
-  --verde: #25B34B;
+  --verde: #167A32;
   --erro: #C62828;
   --erro-fundo: #FFF3F3;
   --grafite: #0E4B65;
@@ -148,6 +148,7 @@ main > article > .cta::after { content: "+"; position: absolute; right: 4%; bott
 .cta h2 { color: var(--branco); }
 .cta h2::after { background: linear-gradient(90deg, var(--branco), var(--turquesa-claro)) !important; }
 .cta p { position: relative; z-index: 1; color: var(--turquesa-claro); }
+.cta p a:not(.botao), .cta p a:not(.botao):hover { color: var(--branco); }
 .cta .botao { border-color: var(--branco); background: var(--branco); color: var(--turquesa-profundo); }
 
 /* Botões e formulários */
