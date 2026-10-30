@@ -192,3 +192,4 @@ if (form && statusForm) {
         termos.setAttribute('aria-invalid', 'false');
     });
 }
+//
