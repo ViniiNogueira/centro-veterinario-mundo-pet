@@ -1,117 +1,194 @@
+
 const numeroClinica = '5511999259171';
 
-const form = document.getElementById('form-orcamento');
+const form = document.getElementById('form-contato');
 const statusForm = document.getElementById('status-form');
-const telefone = document.getElementById('telefone-tutor');
-const termos = document.getElementById('termos-orcamento');
 
-// Máscara do telefone: (11) 99999-9999
-telefone.addEventListener('input', () => {
-    let v = telefone.value.replace(/\D/g, '').slice(0, 11);
+if (form && statusForm) {
+    const telefone = document.getElementById('telefone-contato');
+    const termos = document.getElementById('termos-contato');
 
-    if (v.length > 10) {
-        v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
-    } else if (v.length > 6) {
-        v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
-    } else if (v.length > 2) {
-        v = v.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
-    } else if (v.length > 0) {
-        v = v.replace(/^(\d{0,2})$/, '($1');
-    }
+    const campos = form.querySelectorAll(
+        'input:not([type="checkbox"]), select, textarea'
+    );
 
-    telefone.value = v;
-});
+    // Máscara para telefone brasileiro
+    telefone.addEventListener('input', () => {
+        let valor = telefone.value.replace(/\D/g, '').slice(0, 11);
 
-function mensagemErro(campo) {
-    const v = campo.validity;
+        if (valor.length > 10) {
+            valor = valor.replace(
+                /^(\d{2})(\d{5})(\d{4})$/,
+                '($1) $2-$3'
+            );
+        } else if (valor.length > 6) {
+            valor = valor.replace(
+                /^(\d{2})(\d{4})(\d{0,4})$/,
+                '($1) $2-$3'
+            );
+        } else if (valor.length > 2) {
+            valor = valor.replace(
+                /^(\d{2})(\d{0,5})$/,
+                '($1) $2'
+            );
+        } else if (valor.length > 0) {
+            valor = `(${valor}`;
+        }
 
-    if (v.valueMissing) return 'Preencha este campo.';
-    if (v.tooShort) return `Digite pelo menos ${campo.minLength} caracteres.`;
-    if (v.patternMismatch && campo.type === 'tel') return 'Use o formato (11) 99999-9999.';
-
-    return '';
-}
-
-function validarCampo(campo) {
-    const erro = mensagemErro(campo);
-
-    let aviso = document.getElementById(`erro-${campo.id}`);
-
-    if (!aviso) {
-        aviso = document.createElement('span');
-        aviso.id = `erro-${campo.id}`;
-        aviso.className = 'erro-campo';
-        campo.insertAdjacentElement('afterend', aviso);
-        campo.setAttribute('aria-describedby', aviso.id);
-    }
-
-    aviso.textContent = erro;
-    campo.setAttribute('aria-invalid', erro ? 'true' : 'false');
-
-    return erro === '';
-}
-
-const campos = form.querySelectorAll('input:not([type="checkbox"]), select, textarea');
-
-campos.forEach((campo) => {
-    campo.addEventListener('blur', () => validarCampo(campo));
-
-    campo.addEventListener('input', () => {
-        if (campo.getAttribute('aria-invalid') === 'true') validarCampo(campo);
+        telefone.value = valor;
     });
-});
 
-form.addEventListener('submit', (evento) => {
-    evento.preventDefault();
+    // Mensagens de validação
+    function mensagemErro(campo) {
+        const validade = campo.validity;
 
-    let tudoValidado = true;
+        if (validade.valueMissing) {
+            return 'Preencha este campo.';
+        }
+
+        if (validade.tooShort) {
+            return `Digite pelo menos ${campo.minLength} caracteres.`;
+        }
+
+        if (validade.typeMismatch && campo.type === 'email') {
+            return 'Digite um endereço de e-mail válido.';
+        }
+
+        if (validade.patternMismatch && campo.type === 'tel') {
+            return 'Use o formato (11) 99999-9999.';
+        }
+
+        return '';
+    }
+
+    // Validação individual
+    function validarCampo(campo) {
+        const erro = mensagemErro(campo);
+
+        let aviso = document.getElementById(`erro-${campo.id}`);
+
+        if (!aviso) {
+            aviso = document.createElement('span');
+            aviso.id = `erro-${campo.id}`;
+            aviso.className = 'erro-campo';
+
+            campo.insertAdjacentElement('afterend', aviso);
+            campo.setAttribute('aria-describedby', aviso.id);
+        }
+
+        aviso.textContent = erro;
+        campo.setAttribute('aria-invalid', erro ? 'true' : 'false');
+
+        return erro === '';
+    }
+
+    // Validação ao sair do campo e durante a correção
     campos.forEach((campo) => {
-        if (!validarCampo(campo)) tudoValidado = false;
+        campo.addEventListener('blur', () => {
+            validarCampo(campo);
+        });
+
+        campo.addEventListener('input', () => {
+            if (campo.getAttribute('aria-invalid') === 'true') {
+                validarCampo(campo);
+            }
+        });
+
+        campo.addEventListener('change', () => {
+            if (campo.getAttribute('aria-invalid') === 'true') {
+                validarCampo(campo);
+            }
+        });
     });
 
-    if (!termos.checked) {
-        statusForm.textContent = 'Você precisa concordar com o contato da clínica.';
-        return;
-    }
+    // Envio pelo WhatsApp
+    form.addEventListener('submit', (evento) => {
+        evento.preventDefault();
 
-    if (!tudoValidado) {
-        statusForm.textContent = 'Corrija os campos destacados e tente novamente.';
-        return;
-    }
+        let tudoValidado = true;
+        let primeiroCampoInvalido = null;
 
-    const nomeTutor = document.getElementById('nome-tutor').value.trim();
-    const tel = telefone.value.trim();
-    const nomePet = document.getElementById('nome-pet').value.trim();
-    const detalhes = document.getElementById('detalhes-orcamento').value.trim();
+        campos.forEach((campo) => {
+            if (!validarCampo(campo)) {
+                tudoValidado = false;
 
-    const especie = document.getElementById('especie-pet');
-    const especieTexto = especie.options[especie.selectedIndex].text;
+                if (!primeiroCampoInvalido) {
+                    primeiroCampoInvalido = campo;
+                }
+            }
+        });
 
-    const servico = document.getElementById('servico-orcamento');
-    const servicoTexto = servico.options[servico.selectedIndex].text;
+        if (!termos.checked) {
+            statusForm.textContent =
+                'Você precisa concordar com o contato da clínica.';
 
-    const linhas = [
-        'Olá! Vim pelo site da Clínica Veterinária Mundo Pet e gostaria de solicitar um orçamento.',
-        '',
-        `*Tutor:* ${nomeTutor}`,
-        `*WhatsApp:* ${tel}`,
-        `*Pet:* ${nomePet} (${especieTexto})`,
-        `*Serviço:* ${servicoTexto}`,
-    ];
+            termos.focus();
+            return;
+        }
 
-    if (detalhes) linhas.push('', `*Detalhes:* ${detalhes}`);
+        if (!tudoValidado) {
+            statusForm.textContent =
+                'Corrija os campos destacados e tente novamente.';
 
-    const texto = encodeURIComponent(linhas.join('\n'));
-    const url = `https://wa.me/${numeroClinica}?text=${texto}`;
+            primeiroCampoInvalido.focus();
+            return;
+        }
 
-    window.open(url, '_blank', 'noopener');
+        const nome = document.getElementById('nome-contato').value.trim();
+        const email = document.getElementById('email-contato').value.trim();
+        const tel = telefone.value.trim();
 
-    statusForm.textContent = 'Abrindo o WhatsApp para você enviar a mensagem...';
-    form.reset();
-});
+        const assunto = document.getElementById('assunto-contato');
+        const assuntoTexto =
+            assunto.options[assunto.selectedIndex].text;
 
-form.addEventListener('reset', () => {
-    statusForm.textContent = '';
-    form.querySelectorAll('.erro-campo').forEach((e) => (e.textContent = ''));
-    campos.forEach((campo) => campo.setAttribute('aria-invalid', 'false'));
-});
+        const mensagem =
+            document.getElementById('mensagem-contato').value.trim();
+
+        const linhas = [
+            'Olá! Vim pelo site da Clínica Veterinária Mundo Pet.',
+            '',
+            '*Nome:* ' + nome,
+            '*Telefone:* ' + tel,
+        ];
+
+        if (email) {
+            linhas.push('*E-mail:* ' + email);
+        }
+
+        linhas.push(
+            '*Assunto:* ' + assuntoTexto,
+            '',
+            '*Mensagem:*',
+            mensagem
+        );
+
+        const texto = encodeURIComponent(linhas.join('\n'));
+
+        const url = `https://wa.me/${numeroClinica}?text=${texto}`;
+
+        window.open(url, '_blank', 'noopener,noreferrer');
+
+        statusForm.textContent =
+            'Abrindo o WhatsApp. Confirme o envio da mensagem por lá.';
+
+        form.reset();
+    });
+
+    // Limpeza do formulário
+    form.addEventListener('reset', () => {
+        statusForm.textContent = '';
+
+        campos.forEach((campo) => {
+            campo.setAttribute('aria-invalid', 'false');
+
+            const aviso = document.getElementById(`erro-${campo.id}`);
+
+            if (aviso) {
+                aviso.textContent = '';
+            }
+        });
+
+        termos.setAttribute('aria-invalid', 'false');
+    });
+}
