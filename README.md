@@ -30,7 +30,7 @@ Até o momento, foi desenvolvido o HTML do site e a estrutura inicial do projeto
 - Contato;
 - Galeria.
 
-O desenvolvimento foi realizado de forma colaborativa. Todos os integrantes participaram da construção do projeto e contribuíram para que a estrutura do site representasse a organização escolhida. Nesta etapa, o foco principal foi criar a base das páginas em **HTML5**, organizar a navegação entre elas e reunir informações relevantes sobre a clínica. As próximas etapas poderão incluir melhorias visuais com CSS, recursos de interação e outros aprimoramentos.
+O desenvolvimento foi realizado de forma colaborativa. Todos os integrantes participaram da construção do projeto e contribuíram para que a estrutura do site representasse a organização escolhida. Durante a implementação, tivemos um pouco de dificuldade para integrar o JavaScript ao site, mas, fora isso, não enfrentamos grandes dificuldades. O trabalho envolveu a criação das páginas, a organização da navegação e a inclusão de informações relevantes sobre a clínica.
 
 ### Validação com o W3C validator
 
