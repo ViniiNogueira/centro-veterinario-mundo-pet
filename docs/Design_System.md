@@ -19,7 +19,7 @@
 
 A paleta gerada pelo Gemini parte de um verde-esmeralda (`#00B37E`) como cor primária, usado nos botões e nos detalhes de destaque, e de um azul (`#0284C7`) como cor secundária, que aparece nos estados de foco. As demais cores são neutras: branco (`#FFFFFF`) para o fundo, cinza-azulado escuro (`#111827`) para o texto, cinza muito claro (`#F9FAFB`) para os cards e cinza suave (`#E5E7EB`) para as bordas. O resultado é uma identidade limpa e acolhedora, típica de clínicas veterinárias, que transmite confiança sem pesar visualmente.
 
-![alt text](image-2.png)
+![alt text](paleta-cores.png)
 
 ---
 
@@ -58,13 +58,13 @@ A paleta gerada pelo Gemini parte de um verde-esmeralda (`#00B37E`) como cor pri
 
 ### Parte principal da pagina
 
-![alt text](image.png)
+![alt text](proptitopo-gemini.png)
 
 Protótipo gerado pelo Gemini a partir do prompt enviado pelo professor: menu, seção de destaque, três cards, formulário de agendamento e rodapé, usando o design system extraído da análise.*
 
 ### A parte de formulario do prototipo.
 
-![alt text](image-1.png)
+![alt text](prototipo-gemini-form.png)
 
 ---
 
